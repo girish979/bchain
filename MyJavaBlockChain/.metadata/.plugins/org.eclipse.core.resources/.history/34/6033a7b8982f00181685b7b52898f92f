@@ -1,0 +1,15 @@
+import 
+public class Block {
+	
+	public String hash;
+	public String previousHash;
+	private String data;
+	
+	public Block(String data, String previoushash)
+	{
+		this.data = data;
+		this.previousHash = previoushash;
+		Util.getSHA256Digest(this.previoushash+this.data);
+		//this.hash = ()->{return };
+	}
+}

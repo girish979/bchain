@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+
+public class DonutChain {
+	
+	
+	public static ArrayList<Block> blockchain = new ArrayList<Block>(); 
+
+	public static void main(String[] args) {
+		
+		blockchain.add(new Block("Block1","00000000"));
+		blockchain.add(new Block("Block1","00000000"));
+		blockchain.add(new Block("Block1","00000000"));
+		blockchain.add(new Block("Block1","00000000"));
+		
+		
+		
+		
+		System.out.println("Block 1 hash : " + genesisBlock.hash);
+		System.out.println("Block 2 hash : " + block2.hash);
+		System.out.println("Block 3 hash : " + block3.hash);
+		System.out.println("Block 4 hash : " + block4.hash);
+		
+	}
+
+}

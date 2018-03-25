@@ -1,0 +1,9 @@
+
+public class DonutChain {
+
+	public static void main(String[] args) {
+		Block genesisBlock = new Block("Block1","00000000");
+		
+	}
+
+}

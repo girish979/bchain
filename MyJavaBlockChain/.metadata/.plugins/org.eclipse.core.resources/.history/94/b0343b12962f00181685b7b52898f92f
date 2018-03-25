@@ -1,0 +1,12 @@
+
+public class Block {
+	
+	public String hash;
+	public String previousHash;
+	private String data;
+	
+	public Block(String data, String previoushash)
+	{
+		
+	}
+}

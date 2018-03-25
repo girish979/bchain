@@ -1,0 +1,23 @@
+ 
+public class Block {
+	
+	public String hash;
+	public String previousHash;
+	private String data;
+	private int nounce;
+	
+	public String calculateHash()
+	{
+		return Util.getSHA256Digest(
+					this.previousHash + 
+					this.data
+				);
+	}
+	
+	public Block(String data, String previoushash)
+	{
+		this.data = data;
+		this.previousHash = previoushash;		
+		this.hash = calculateHash();
+	}
+}
