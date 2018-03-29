@@ -6,6 +6,13 @@ public class Block {
 	private String data;
 	private int nonce;
 	
+	public Block(String data, String previoushash)
+	{
+		this.data = data;
+		this.previousHash = previoushash;		
+		this.hash = calculateHash();
+	}
+	
 	public String calculateHash()
 	{
 		return Util.getSHA256Digest(
@@ -14,14 +21,7 @@ public class Block {
 					data
 				);
 	}
-	
-	public Block(String data, String previoushash)
-	{
-		this.data = data;
-		this.previousHash = previoushash;		
-		this.hash = calculateHash();
-	}
-	
+		
 	public void mineBlock(int difficulty) 
 	{
 		//Create a string with difficulty * "0"

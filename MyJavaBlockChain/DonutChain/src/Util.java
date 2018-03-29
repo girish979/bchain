@@ -2,7 +2,8 @@ import java.security.MessageDigest;
 
 public class Util {
 	
-	public static String getSHA256Digest(String input){		
+	public static String getSHA256Digest(String input)
+	{		
 		try {
 			MessageDigest digest = MessageDigest.getInstance("SHA-256");	         
 			byte[] encodedhash = digest.digest(input.getBytes("UTF-8"));
@@ -17,7 +18,8 @@ public class Util {
 		}
 	}
 
-	private static String bytesToHex(byte[] hash) {		
+	private static String bytesToHex(byte[] hash) 
+	{		
 	    StringBuffer hexString = new StringBuffer();
 	    for (int i = 0; i < hash.length; i++) {
 	    String hex = Integer.toHexString(0xff & hash[i]);
