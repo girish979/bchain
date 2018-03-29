@@ -13,8 +13,10 @@ public class Block {
 		this.hash = calculateHash();
 	}
 	
+	//Get the hash for the block
 	public String calculateHash()
 	{
+		//Includes previous nonce, block's hash and current blocks data(transactions,etc.,)
 		return Util.getSHA256Digest(
 					Integer.toString(nonce) +
 					previousHash + 
@@ -22,6 +24,7 @@ public class Block {
 				);
 	}
 		
+	//Mines block with given difficulty
 	public void mineBlock(int difficulty) 
 	{
 		//Create a string with difficulty * "0"
