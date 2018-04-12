@@ -1,9 +1,0 @@
-
-public class Block {
-	
-	public String hash;
-	public String previousHash;
-	private String Data;
-	
-	
-}
